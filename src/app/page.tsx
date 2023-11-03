@@ -1,4 +1,4 @@
-import { TopTemplate } from '@/components/templates/Top'
+import { TopTemplate } from '@/templates/Top'
 
 export default function Home() {
   return (
