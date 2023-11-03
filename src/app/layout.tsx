@@ -1,3 +1,4 @@
+import { Header } from '@/components/layouts/Header'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -12,7 +13,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <header className="fixed z-50 h-[80px] w-full">
+          <Header />
+        </header>
+        <div className="h-[80px] w-full" />
+        <main>{children}</main>
+      </body>
     </html>
   )
 }
